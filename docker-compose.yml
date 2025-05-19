@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    working_dir: /app
+    volumes:
+      - ./frontend:/app:cached
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      - HOST=0.0.0.0
+    command: npm run dev
+
+  nuxt:
+    build:
+      context: ./nuxt
+      dockerfile: Dockerfile
+    working_dir: /app
+    volumes:
+      - ./nuxt:/app:cached
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - HOST=0.0.0.0
+    command: npm run dev
