@@ -9,6 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "datatables.net": "^2.3.1",
+    "datatables.net-dt": "^2.3.1",
+    "jquery": "^3.7.1",
+    "sweetalert2": "^11.21.2",
     "vue": "^3.5.13",
     "vue-router": "^4.5.1"
   },

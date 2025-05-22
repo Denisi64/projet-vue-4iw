@@ -8,7 +8,7 @@ function goTo(path) {
 </script>
 
 <template>
-  <div class="h-screen w-64 bg-base-200 text-base-content p-4 flex flex-col gap-4">
+  <div class="w-64 h-full bg-base-200 text-base-content p-4 flex flex-col gap-4">
     <h1 class="text-2xl font-bold mb-6 text-primary">📁 Gestionnaire</h1>
 
     <ul class="menu space-y-2">

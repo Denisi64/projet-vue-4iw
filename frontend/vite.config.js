@@ -19,5 +19,12 @@ export default defineConfig({
     watch: {
       usePolling: true,
     },
-  },
+    proxy: {
+      '/api': {
+        target: 'http://nuxt:3000',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api/, '/api')
+      }
+    }
+  }
 })
